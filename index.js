@@ -29,3 +29,5 @@ app.listen(process.env.port, async () => {
     console.log("DB is not connected");
   }
 });
+
+module.exports = app
