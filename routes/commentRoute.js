@@ -5,7 +5,7 @@ const { createComment, replyOnComment, getCommentsForPost, expandParentComment }
 const router = express.Router()
 
 router.post('/posts/:postId/comments', verifyToken, createComment);
-
+ //a
 router.post('/posts/:postId/comments/:commentId/reply', verifyToken, replyOnComment);
 
 router.get('/posts/:postId/comments', getCommentsForPost);
