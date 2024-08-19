@@ -8,7 +8,7 @@ const router = express.Router();
 router.get("/get",verifyToken, getPost);
 
 // Create a new post
-router.post("/post",verifyToken, createPost);
+router.post("/create",verifyToken, createPost);
 
 // Update a post
 router.patch("/update/:id",verifyToken,updatePost );

@@ -3,10 +3,9 @@ require("dotenv").config()
 // const bycrypt = require('bcrypt')
 
 const verifyToken = (req,res,next)=>{
-const token =req.headers.authorization
+let token =req.headers.authorization
 
-
-
+token = token.split(" ")[1]
 if(token){
 var decoded = jwt.verify(token, process.env.privateKey);
 if(decoded){

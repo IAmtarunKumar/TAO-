@@ -7,7 +7,7 @@ exports.getPost =  async (req, res) => {
         return res.status(200).send(allPosts);
     } catch (error) {
         return res.status(500).send(`Internal server error: ${error.message}`);
-    }
+    }ll
 }
 
 
@@ -18,7 +18,7 @@ exports.createPost = async (req, res) => {
             text
         });
         await createPost.save();
-        return res.status(201).send(createPost);
+        return res.status(201).send("Post created successfully");
     } catch (error) {
         return res.status(500).send(`Internal server error: ${error.message}`);
     }

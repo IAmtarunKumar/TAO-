@@ -18,7 +18,7 @@ app.use(cors())
 
 app.use("/user", userRouter);
 app.use("/post", postRouter);
-app.use("/comment" , commentRouter)
+app.use("/" , commentRouter)
 
 app.listen(process.env.port, async () => {
   try {
@@ -30,4 +30,4 @@ app.listen(process.env.port, async () => {
   }
 });
 
-module.exports = app
+
