@@ -44,7 +44,7 @@ This is a RESTful API for a social media platform that handles multi-level comme
 1. Clone the repository:
     ```sh
     git clone https://github.com/IAmtarunKumar/TAO-.git
-    cd TAO
+    cd TAO-
     ```
 
 2. Install dependencies:
