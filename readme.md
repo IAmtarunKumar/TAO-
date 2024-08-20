@@ -128,7 +128,7 @@ The API will be available at `http://localhost:4000`.
   - Request Body:
     ```json
     {
-       "postId": 1,
+     
         "text": "This is a comment."
     }
     ```
@@ -138,8 +138,8 @@ The API will be available at `http://localhost:4000`.
    - Request Body:
     ```json
     {
-       "postId": 1,
-  "commentId": 1,
+    
+ 
   "text": "This is a reply to the comment."
     }
     ```
