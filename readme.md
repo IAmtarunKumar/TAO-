@@ -104,7 +104,7 @@ The API will be available at `http://localhost:4000`.
     ```
 
 - **Login**
-  - `POST /auth/login`
+  - `POST /user/login`
   - Request Body:
     ```json
     {
