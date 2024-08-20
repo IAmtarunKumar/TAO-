@@ -20,14 +20,8 @@ app.use("/user", userRouter);
 app.use("/post", postRouter);
 app.use("/" , commentRouter)
 
-app.listen(process.env.port, async () => {
-  try {
-    await connection;
-    console.log(`${process.env.port} is working`);
-  } catch (error) {
-    console.log(error);
-    console.log("DB is not connected");
-  }
-});
+
+
+module.exports = {app}
 
 

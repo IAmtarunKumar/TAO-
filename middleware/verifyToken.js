@@ -1,26 +1,28 @@
-const jwt = require('jsonwebtoken')
-require("dotenv").config()
-// const bycrypt = require('bcrypt')
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
-const verifyToken = (req,res,next)=>{
-let token =req.headers.authorization
+const verifyToken = (req, res, next) => {
+    let token = req.headers.authorization;
 
-token = token.split(" ")[1]
-if(token){
-var decoded = jwt.verify(token, process.env.privateKey);
-if(decoded){
-    const user = decoded.user
-    req.user = user
-    next()
-}else{
-    res.send("First you need to login")
-}
+    if (!token) {
+        return res.status(401).send('Access Denied: No token provided');
+    }
 
-}else{
-res.send("First you need to login")
-}
+    token = token.split(' ')[1];
 
-}
+    try {
+        const decoded = jwt.verify(token, process.env.privateKey);
+        req.user = decoded.user;
+        next();
+    } catch (err) {
+        if (err.name === 'TokenExpiredError') {
+            return res.status(401).send('Token Expired: Please login again');
+        } else if (err.name === 'JsonWebTokenError') {
+            return res.status(403).send('Invalid Token: Authorization denied');
+        } else {
+            return res.status(500).send('Internal Server Error');
+        }
+    }
+};
 
-module.exports = verifyToken
-
+module.exports = verifyToken;

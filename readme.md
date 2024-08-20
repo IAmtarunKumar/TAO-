@@ -43,8 +43,8 @@ This is a RESTful API for a social media platform that handles multi-level comme
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/talha-ansarii/E-Commerce-backend.git
-    cd E-Commerce-backend
+    git clone https://github.com/IAmtarunKumar/TAO-.git
+    cd TAO
     ```
 
 2. Install dependencies:
@@ -55,13 +55,10 @@ This is a RESTful API for a social media platform that handles multi-level comme
 3. Set up environment variables:
     Create a `.env` file in the root directory and add the following:
     ```env
-    PORT=3000
-    DB_HOST="YOUR DB HOST"
-    DB_USER="YOUR DB USERNAME"
-    DB_PASSWORD="YOUR DB PASSWORD"
-    DB_NAME="YOUR DB NAME"
-    JWT_SECRET="YOUR JWT SECRET"
-    NODE_ENV=development/production
+    Port= Add port
+    privateKey= Add jwt private key
+    mongoURL = Add Mongo link
+    
     ```
 
 4. Set up the MySQL database using XAAMP:
@@ -166,12 +163,12 @@ The API will be available at `http://localhost:4000`.
 
 To run tests, use the following command:
 ```sh
-npm test
+npm run jest
 ```
 
 ### Documentation
 
-- API documentation is available via Swagger:
-`https://your-deployed-app-url.on.railway.app/api-docs`
+- API documentation is available via Postman:
+`https://red-capsule-798619.postman.co/workspace/Team-Workspace~703af167-9d79-4d36-811c-d7cfdd53ffe0/collection/24269049-e0bd927f-6549-44e2-be1f-882de1f76fc3?action=share&creator=24269049`
 
 
