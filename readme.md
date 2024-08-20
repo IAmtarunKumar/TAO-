@@ -135,10 +135,10 @@ The API will be available at `http://localhost:4000`.
 
 - **Reply to Comment** 
   - `POST /api/posts/{postId}/comments/{commentId}/reply`
-  - Request Body:
+   - Request Body:
     ```json
     {
-  "postId": 1,
+       "postId": 1,
   "commentId": 1,
   "text": "This is a reply to the comment."
     }
