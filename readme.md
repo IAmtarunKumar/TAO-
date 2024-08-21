@@ -3,9 +3,9 @@
 This is a RESTful API for a social media platform that handles multi-level comments on posts. The API allows users to create comments, reply to existing comments, and retrieve comments with pagination. Additionally, user authentication and rate limiting have been implemented to ensure secure and efficient API usage.
 
 ## Deployment
- Deployed on Railway.
+ Deployed Link.
  
- ```https://web-production-3594.up.railway.app```
+ ```http://44.203.0.181:4000/```
 
  
 ## Features

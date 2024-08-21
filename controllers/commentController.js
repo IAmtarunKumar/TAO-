@@ -70,7 +70,7 @@ exports.getCommentsForPost = async (req, res) => {
       const { postId } = req.params;
       console.log("postid", postId)
       const comments = await Comment.find({ postId, parentCommentId: null }).sort({ createdAt: -1 });
-      res.json(comments);
+      res.send(comments);
     } catch (error) {
       res.status(400).json({ error: error.message });
     }
@@ -89,7 +89,7 @@ exports.expandParentComment = async (req, res) => {
         .sort({ createdAt: -1 })
         .skip((page - 1) * pageSize)
         .limit(Number(pageSize));
-      res.json(replies);
+      res.send(replies);
     } catch (error) {
       res.status(400).json({ error: error.message });
     }
