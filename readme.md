@@ -79,7 +79,7 @@ The API will be available at `http://localhost:4000`.
 ```docker build -t multi-level-comment-system```
 
 2. Run the Docker container
-```docker run -p 3000:3000 multi-level-comment-system```
+```docker run -p 4000:4000 multi-level-comment-system```
 
 
 
